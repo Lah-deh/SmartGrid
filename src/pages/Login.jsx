@@ -5,7 +5,7 @@ import { supabase } from '../lib/supabase'
 
 export default function Login() {
   const navigate = useNavigate()
-  const [mode, setMode] = useState('login') // 'login' | 'signup'
+  const [mode, setMode] = useState('login') 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -45,8 +45,7 @@ export default function Login() {
       return
     }
 
-    // If email confirmation is required, Supabase returns no session yet —
-    // auth.uid() will be null and the profile insert will fail RLS.
+   
     if (!data.session) {
       setError(
         'Account created, check your email to confirm, then log in. ' +
@@ -125,7 +124,7 @@ export default function Login() {
         <form onSubmit={mode === 'login' ? handleLogin : handleSignup} className="space-y-4">
           {mode === 'signup' && (
             <>
-              <Field label="Full name" value={name} onChange={setName} placeholder="Adaeze Okafor" />
+              <Field label="Full name" value={name} onChange={setName} placeholder="John Doe" />
               <Field label="Agency access code" value={accessCode} onChange={setAccessCode} placeholder="Issued by your coordinator" type="password" />
               <div>
                 <label className="text-xs text-[#6B6862] mb-1.5 block">LGA or agency</label>

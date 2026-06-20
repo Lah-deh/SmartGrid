@@ -48,7 +48,7 @@ export default function Home() {
           </h1>
           <p className="text-[#9C9890] text-base sm:text-lg max-w-lg mb-8 sm:mb-10 leading-relaxed">
             SafeGrid gives every flood, fire and outage a verified path from a
-            citizen's phone to the agency that can actually fix it - and tells you
+            citizen's phone to the agency that can actually fix it and tells you
             what happened next.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
